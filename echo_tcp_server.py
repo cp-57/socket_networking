@@ -36,7 +36,7 @@ def start_server(host, port):
                     client_socket.sendall(response.encode())
 
 if __name__ == "__main__":
-    HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
+    HOST = '10.10.10.2'  # Standard loopback interface address (localhost)
     PORT = 5000
 
     start_server(HOST, PORT)
