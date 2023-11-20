@@ -2,7 +2,13 @@ import socket
 
 def count_digits(message):
     """ Count the number of digits in the message """
-    return sum(char.isdigit() for char in message)
+    digits = ""
+    count=0
+    for char in message:
+        if char.isdigit():
+            digits+=char
+            count+=1
+    return (digits,count)
 
 def start_server(host, port):
     """ Start the socket server """
@@ -22,8 +28,8 @@ def start_server(host, port):
                     message = data.decode()
 
                     if "SECRET" in message:
-                        digits_count = count_digits(message)
-                        response = f"Digits: Count: {digits_count}"
+                        digits,digits_count = count_digits(message)
+                        response = f"Digits: {digits} Count: {digits_count}"
                     else:
                         response = "Secret code not found."
 
