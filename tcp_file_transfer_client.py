@@ -26,7 +26,8 @@ def send_file_to_server(host, port, filename):
 
 if __name__ == "__main__":
     HOST = '10.10.10.2'  
-    PORT = 5000         
+    PORT = 5000
+    # read from an example file in current directory
     FILENAME = 'example.txt'
 
     send_file_to_server(HOST, PORT, FILENAME)
