@@ -15,8 +15,6 @@ def send_file_to_server(host, port, filename):
                         # File transmission is done
                         break
                     client_socket.sendall(bytes_read)
-            
-            print(f"File {filename} has been sent.")
 
         except Exception as e:
             print(f"An error occurred: {e}")
