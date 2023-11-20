@@ -18,7 +18,7 @@ def send_message_to_server(host, port, message):
             print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    HOST = '10.10.10.1'  # Server's hostname or IP address
+    HOST = '10.10.10.2'  # Server's hostname or IP address
     PORT = 5000     # Port used by the server
 
     if len(sys.argv) < 2:
